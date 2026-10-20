@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Scrypt.js" defer></script>
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container header__container">
+            <a  href="index.html">
+                <img src="image/Logo.jpg" alt="Логотип" class="header-icon">
+            </a>
+            <nav class="header__nav">
+                <a href="news.html">Новости</a>
+                <a href="posters.html">Афиша</a>
+                <a href="abouts.html">О нас</a>
+                <a href="#Footer">Контакты</a>
+            </nav>
+            
+            <div class="header__right">
+                <!-- Кнопка переключения темы -->
+                <button id="theme-toggle" class="theme-btn" aria-label="Переключить тему">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <!-- Иконка авторизации в хедере -->
+                <div class="header-icon">
+                    <button id="loginTrigger" class="header-icon" aria-label="Авторизация">
+                        <img src="image/avtority.png" alt="Войти" class="header-icon">
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="container main-layout">
+        
+        <!-- Основной контент -->
+        <main class="container main-layout">
+            
+            <!-- Карточка 1 (Главная) -->
+            <article class="news-item-large">
+                <div class="news-img-placeholder">
+                    <img src="https://via.placeholder.com/300x200/e0e0e0/b0b0b0?text=X" alt="Библиотека">
+                </div>
+                <div class="news-info">
+                    <h2 class="news-title">Муниципальное бюджетное учреждение культуры "Объединение муниципальных библиотек города Перси"</h2>
+                    <div class="news-meta">
+                        <p><strong>Дата открытия:</strong> 10.10.2026</p>
+                        <p><strong>Кому посвящена:</strong> Фио писателя</p>
+                        <p><strong>Категория:</strong> взрослая</p>
+                        <p><strong>Читателей:</strong> 154</p>
+                    </div>
+                    <a href="#" class="btn-teal">Читать полностью</a>
+                </div>
+            </article>
+
+            <!-- Карточка 2 -->
+            <article class="news-item-large">
+                <div class="news-img-placeholder">
+                    <img src="https://via.placeholder.com/300x200/e0e0e0/b0b0b0?text=X" alt="Библиотека">
+                </div>
+                <div class="news-info">
+                    <h3 class="news-title">Название библиотеки</h3>
+                    <div class="news-meta">
+                        <p><strong>Дата открытия:</strong> 10.10.2026</p>
+                        <p><strong>Кому посвящена:</strong> Фио писателя</p>
+                        <p><strong>Категория:</strong> взрослая</p>
+                        <p><strong>Читателей:</strong> 154</p>
+                    </div>
+                    <a href="#" class="btn-teal">Читать полностью</a>
+                </div>
+            </article>
+
+            <!-- Карточка 3 -->
+            <article class="news-item-large">
+                <div class="news-img-placeholder">
+                    <img src="https://via.placeholder.com/300x200/e0e0e0/b0b0b0?text=X" alt="Библиотека">
+                </div>
+                <div class="news-info">
+                    <h3 class="news-title">Название библиотеки</h3>
+                    <div class="news-meta">
+                        <p><strong>Дата открытия:</strong> 10.10.2026</p>
+                        <p><strong>Кому посвящена:</strong> Фио писателя</p>
+                        <p><strong>Категория:</strong> взрослая</p>
+                        <p><strong>Читателей:</strong> 154</p>
+                    </div>
+                    <a href="#" class="btn-teal">Читать полностью</a>
+                </div>
+            </article>
+
+            <!-- Карточка 4 -->
+            <article class="news-item-large">
+                <div class="news-img-placeholder">
+                    <img src="https://via.placeholder.com/300x200/e0e0e0/b0b0b0?text=X" alt="Библиотека">
+                </div>
+                <div class="news-info">
+                    <h3 class="news-title">Название библиотеки</h3>
+                    <div class="news-meta">
+                        <p><strong>Дата открытия:</strong> 10.10.2026</p>
+                        <p><strong>Кому посвящена:</strong> Фио писателя</p>
+                        <p><strong>Категория:</strong> взрослая</p>
+                        <p><strong>Читателей:</strong> 154</p>
+                    </div>
+                    <a href="#" class="btn-teal">Читать полностью</a>
+                </div>
+            </article>
+
+        </main>
+    </div>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer" id="Footer">
+        <div class="container footer__container">
+            <div class="footer__block">
+                <h3 class="footer__title">КОНТАКТНЫЕ ДАННЫЕ</h3>
+            </div>
+            <div class="footer__block">
+                <p>Телефон: 8-800-555-35-35</p>
+                <p>Электронная почта: ivanov@mail.ru</p>
+                <p>Адрес: Россия, Пермь, Косой переулок, 21</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- окно авторизации -->
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Вход в систему</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="login">Логин или Email</label>
+                    <input type="text" id="login" placeholder="Введите логин" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" placeholder="Введите пароль" required>
+                </div>
+                <button type="submit" class="btn-submit">Войти</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

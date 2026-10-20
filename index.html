@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Scrypt.js" defer></script>
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container header__container">
+            <a  href="index.html">
+                <img src="image/Logo.jpg" alt="Логотип" class="header-icon">
+            </a>
+            <nav class="header__nav">
+                <a href="news.html">Новости</a>
+                <a href="posters.html">Афиша</a>
+                <a href="abouts.html">О нас</a>
+                <a href="#Footer">Контакты</a>
+            </nav>
+            
+            <div class="header__right">
+                <!-- Кнопка переключения темы -->
+                <button id="theme-toggle" class="theme-btn" aria-label="Переключить тему">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <!-- Иконка авторизации в хедере -->
+                <div class="header-icon">
+                    <button id="loginTrigger" class="header-icon" aria-label="Авторизация">
+                        <img src="image/avtority.png" alt="Войти" class="header-icon">
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="container main-layout">
+        
+        <!-- Основной контент -->
+        <main class="content">
+            
+            <!-- БАННЕР -->
+            <section class="hero">
+                <img src="image/Dom-Smyshlyaeva.jfif" alt="Баннер" class="hero__img">
+                <div class="hero__content">
+                    <p class="hero__text">Объединение муниципальных библиотек - органнизация с историей становления</p>
+                    <a href="abouts.html" class="btn-primary">Узнать о нас</a>
+                </div>
+            </section>
+
+            <!-- АФИШИ -->
+            <section class="section">
+                <h2 class="section__title">Уже скоро: <a href="posters.html"><span class="section__link">Афиша</span></a></h2>
+                <div class="grid-4">
+                    <div class="card">
+                        <div class="card__date">Дата</div>
+                        <img src="https://via.placeholder.com/150x200/e0e0e0/b0b0b0?text=X" alt="Постер" class="card__img">
+                        <p>Название события</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__date">Дата</div>
+                        <img src="https://via.placeholder.com/150x200/e0e0e0/b0b0b0?text=X" alt="Постер" class="card__img">
+                        <p>Название события</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__date">Дата</div>
+                        <img src="https://via.placeholder.com/150x200/e0e0e0/b0b0b0?text=X" alt="Постер" class="card__img">
+                        <p>Название события</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__date">Дата</div>
+                        <img src="https://via.placeholder.com/150x200/e0e0e0/b0b0b0?text=X" alt="Постер" class="card__img">
+                        <p>Название события</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ПОСЛЕДНИЕ НОВОСТИ -->
+            <section class="section">
+                <div class="section__header">
+                    <h2 class="section__title">Последние новости: <a href="news.html" class="section__link">смотреть все</a></h2>                    
+                </div>
+                <div class="grid-2">
+                    <div class="news-card">
+                        <img src="https://via.placeholder.com/400x200/e0e0e0/b0b0b0?text=X" alt="Новость" class="news-card__img">
+                        <p>Заголовок новости</p>
+                    </div>
+                    <div class="news-card">
+                        <img src="https://via.placeholder.com/400x200/e0e0e0/b0b0b0?text=X" alt="Новость" class="news-card__img">
+                        <p>Заголовок новости</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer" id="Footer">
+        <div class="container footer__container">
+            <div class="footer__block">
+                <h3 class="footer__title">КОНТАКТНЫЕ ДАННЫЕ</h3>
+            </div>
+            <div class="footer__block">
+                <p>Телефон: 8-800-555-35-35</p>
+                <p>Электронная почта: ivanov@mail.ru</p>
+                <p>Адрес: Россия, Пермь, Косой переулок, 21</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- окно авторизации -->
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Вход в систему</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="login">Логин или Email</label>
+                    <input type="text" id="login" placeholder="Введите логин" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" placeholder="Введите пароль" required>
+                </div>
+                <button type="submit" class="btn-submit">Войти</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
