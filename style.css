@@ -56,7 +56,7 @@ img {
 }
 
 .container {
-    max-width: 100%;
+    max-width: 80%;
     margin: 0 auto;
     padding: 0 15px;
     align-content: center;
@@ -114,6 +114,7 @@ img {
 }
 
 .header-icon{
+    border: none;
     height: 40px;
     width: 40px;
     color: var(--primary-teal);
@@ -596,6 +597,7 @@ body.dark-theme .sidebar-event img {
 /* Контейнер для картинки, чтобы она не вылезала */
 .place-img-box {
     width: 100%;
+    height: max-content;
     border: 1px solid var(--border-color);
     margin-bottom: 15px;
     background-color: var(--white); /* Чтобы при прозрачности не было черных дыр */
@@ -603,7 +605,7 @@ body.dark-theme .sidebar-event img {
 
 .place-img {
     width: 100%;
-    height: 300px; /* Фиксированная высота для ровности */
+    height: 100%; /* Фиксированная высота для ровности */
     object-fit: cover;
     display: block;
 }
